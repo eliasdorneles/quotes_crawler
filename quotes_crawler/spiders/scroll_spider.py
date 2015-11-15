@@ -6,7 +6,6 @@ class QuotesSpider(scrapy.Spider):
     name = 'quotes-scroll'
     quotes_base_url = 'http://spidyquotes.herokuapp.com/api/quotes?page=%s'
     start_urls = [quotes_base_url % 1]
-    download_delay = 1.5
 
     def parse(self, response):
         data = json.loads(response.body)

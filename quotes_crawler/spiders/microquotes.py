@@ -8,7 +8,6 @@ class QuotesSpider(scrapy.Spider):
     start_urls = (
         'http://spidyquotes.herokuapp.com/',
     )
-    download_delay = 1.5
 
     def parse(self, response):
         extractor = LxmlMicrodataExtractor()

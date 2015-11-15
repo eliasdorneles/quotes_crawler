@@ -5,7 +5,6 @@ import js2xml
 class QuotesSpider(scrapy.Spider):
     name = 'quotes-js'
     start_urls = ['http://spidyquotes.herokuapp.com/js/']
-    download_delay = 1.5
 
     def parse(self, response):
         script = response.xpath('//script[contains(., "var data =")]/text()').extract_first()
